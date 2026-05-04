@@ -25,49 +25,71 @@ body {
     width: 100%;
     max-width: 400px;
     padding: 0;
-    height: 800px; /* wrapper height */
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .login-container {
     background-color: white;
-    border-radius: 0; /* square edges */
-    height: 100%; /* make the container fill the wrapper */
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
+    border-radius: 10px;
+    padding: 32px 32px 32px 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.14);
     display: flex;
-    flex-direction: column; /* stack children vertically */
-    justify-content: space-between; /* spread items to top/bottom */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+    max-height: 100vh;
+}
 }
 
 
 .logo {
-    width: 100px; /* bigger logo */
-    margin: 0 auto 5px auto; /* less space below */
+    width: 70px;
+    margin: 0 auto 8px auto;
     display: block;
 }
 
 
 .login-container h1 {
-    color: #1f4d2e; /* dark green */
-    font-size: 28px;
-    margin-bottom: 10px;
+    color: #1f4d2e;
+    font-size: 23px;
+    margin-bottom: 3px;
 }
 
 .subtitle {
-    color: #2e6b3b; /* green text */
-    margin-bottom: 20px;
-    font-size: 16px;
+    color: #2e6b3b;
+    margin-bottom: 7px;
+    font-size: 14px;
+    text-align: justify;
 }
 
 .login-container input {
     width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 14px;
+    margin-bottom: 6px;
 }
+
+#emailInput {
+    margin-bottom: 4px !important;
+}
+#passwordInput {
+    margin-bottom: 10px !important;
+}
+
+/* Reduce space specifically between Email and Password input */
+/* #emailInput {
+    margin-bottom: 1px !important;
+} */
 
 .login-container button {
     width: 100%;
@@ -79,7 +101,7 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .login-container button:hover {
@@ -88,7 +110,7 @@ body {
 
 .forgot, .or, .signup {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     color: #2e6b3b;
 }
 
